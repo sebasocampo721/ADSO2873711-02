@@ -11,17 +11,18 @@ void main(){
   valorcompra= double.parse(stdin.readLineSync()!);
   
   //proceso y salida
-  descuento=0;
-  if (valorcompra>=10000) {
-    descuento= valorcompra*0.1;
-  }
-  if (valorcompra>=20000) {
+  pagototal=valorcompra;
+  if (valorcompra>20000) {
     descuento= valorcompra*0.2;
+    pagototal= valorcompra-descuento;
   }
-  else  {
+  if (valorcompra>10000) {
+    descuento= valorcompra*0.1;
+    pagototal= valorcompra-descuento;
+  }
+  if (valorcompra<10000) {
     print("no hay descuento por su compra");
   }
-  pagototal= valorcompra-descuento;
   // Imprime el resultado
   print("el valor a pagar es: $pagototal");
 }

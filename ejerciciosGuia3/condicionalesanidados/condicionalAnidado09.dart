@@ -6,7 +6,7 @@ void main(){
   */
   // definicion variables
   
-  int jubilacionEdad, jubilacionAntiguedad, jubilacionAdulta, edad, aos;
+  int  edad, aos;
   
   //entrada
   
