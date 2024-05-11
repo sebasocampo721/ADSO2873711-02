@@ -6,7 +6,7 @@ void main(List<String> args){
   int num;
   int suma= 0; //variable tipo acumulador 
   for(int i=0; i< 10; i++){
-    print("digite eo numero");
+    print("digite el numero");
     num= int.parse(stdin.readLineSync()!);
     // se va guardando la suma de los numeros
     suma = suma+num; //suma += num;
