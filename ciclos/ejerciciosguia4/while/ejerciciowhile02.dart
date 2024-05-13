@@ -14,17 +14,18 @@ void main(List<String> args) {
     cantobreros= int.parse(stdin.readLineSync()!);
     preciohora=20;
     extra=25;
+    salariototal=0;
     while(contador < cantobreros){
     print("ingrese la cantidad de horas trabajadas");
     horas= int.parse(stdin.readLineSync()!);
-    if (horas <= 40){
+    if (horas < 40){
       salariototal=(horas* preciohora) as double;
        contador++;
     }else {
-      extra=(horas-40)*extra;
-      salariototal=extra+salariototal;
+      extra=(horas-40);
+      salariototal=40+extra*25;
     }
   }
   
-  print("el promedio es: $ ");
+  print("el promedio es: $salariototal");
 }
