@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  //sebastian oacampo - eje for 04
+  //sebastian oacampo - eje for 05
   /*Calcular  e  imprimir  la  tabla  de  multiplicar  de  un  número  cualquiera.  Imprimir  el  multiplicando,  el multiplicador y el producto.
   */
   // definicion variables
