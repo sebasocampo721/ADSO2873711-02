@@ -32,7 +32,7 @@ void main(List<String> args) {
     x=x-1;
   }
   promedio=((edadmujeres+edadmujeres)/n) as int;
-  print("el ")
+  print("el ");
   print("el promedio de hombres es: $promediohombres");
   print("el promedio de mujeres es: $promediomujeres");
 }

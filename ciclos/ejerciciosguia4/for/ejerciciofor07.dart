@@ -8,22 +8,22 @@ void main(List<String> args) {
   */
   // definicion variables
   
+  double  preciooriginal=5000, kiloscomprados, totalTienda=0, precioTotalAPagar;
+  int canclientes=15;
   
-  double  preciooriginal=0, kiloscomprados, totalTienda=0;
-  print("ingrese el numero de kilos comprados");
-  kiloscomprados=double.parse(stdin.readLineSync()!);
   //proceso y salida
-  for ( kiloscomprados;; ) {
-    double precioTotalAPagar;
+  for ( int i=0; i< canclientes; i++ ) {
+    print("ingrese el numero de kilos comprados");
+    kiloscomprados=double.parse(stdin.readLineSync()!);
     if (kiloscomprados > 10) {
       precioTotalAPagar = kiloscomprados * preciooriginal * 0.85;
     } else {
       precioTotalAPagar = kiloscomprados * preciooriginal;
     }
     totalTienda += precioTotalAPagar;
-    print("El cliente compró $kiloscomprados kilos y pagará $precioTotalAPagar unidades monetarias.");
+    print("El cliente compró $kiloscomprados kilos y pagará $precioTotalAPagar .");
   }
 
-  print("El total percibido por la tienda es: $totalTienda unidades monetarias.");
+  print("El total percibido por la tienda es: $totalTienda ");
 }
 

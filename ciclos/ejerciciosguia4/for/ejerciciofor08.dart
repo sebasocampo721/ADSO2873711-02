@@ -16,6 +16,6 @@ void main(List<String> args) {
     factorial=factorial*i;
   }
  
-  print("el resultado es: $factorial");
+  print("el factorial de $n es $factorial");
 }
 

@@ -10,8 +10,10 @@ void main(List<String> args) {
   print("ingrese un numero");
   n=int.parse(stdin.readLineSync()!);
   //proceso y salida
-  for(int i=1; i<= 40; i++){
+  for(int i=1; i<= 11; i++){
     resultado= n*i;
+    print("$n * $i = $resultado");
+    
     
   }
   print("el resultado es: $resultado");

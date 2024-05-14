@@ -6,14 +6,22 @@ void main(List<String> args) {
   */
   // definicion variables
   
-  int  calificacion, calificiacion_baja=0, suma=0, promedio;
+  int  calificacion, calificiacion_baja=0, suma=0, promedio, calificacion_mayor;
   //proceso y salida
   for(int i=1; i<= 40; i++){
     print("digite una calificacion $i");
     calificacion= int.parse(stdin.readLineSync()!);
     suma= suma+calificacion;
+    while (calificacion<0 || calificacion>5){
+      print("la nota esta en el rango incorrecto");
+      print("ingrese de nuevo la nota del alumno" +(i+1).toString());
+      calificacion=int.parse(stdin.readLineSync()!);
+    }
     if (calificacion<calificiacion_baja){
       calificiacion_baja=calificacion;
+    }
+    if (calificacion>calificacion_mayor){
+      calificiacion=calificacion;
     }
   }
   promedio= (suma / 40) as int;
