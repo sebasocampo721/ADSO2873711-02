@@ -7,21 +7,25 @@ void main(List<String> args) {
   */
   // definicion variables
    
-  int x, n, horas, horasextra;
+  int contador=0, cantvendedores, horas, horasextra;
    double salario=0;
   
-    print("ingrese la cantida de vendedores");
-    n= int.parse(stdin.readLineSync()!);
-    x=1;
+    print("ingrese la cantidad de vendedores");
+    cantvendedores= int.parse(stdin.readLineSync()!);
     
-    while( x <= n){
-    print("ingrese el numero de horas trabajadas");
+    
+    while( contador < cantvendedores){
+    print("ingrese el numero de horas trabajadas del vendedor ${contador+1}");
     horas=int.parse(stdin.readLineSync()!);
     if(horas <= 40){
       salario=horas*20;
-    }
+    }else{
     horasextra=horas-40;
     salario= 40*20+(horasextra*25);
+    }
+    contador++;
+      print("el salario del trabajardor $contador es: $salario");
   }
-  print("el salario del trabajardor $x es: $salario");
+  
+
 }

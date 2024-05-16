@@ -6,27 +6,30 @@ void main(List<String> args) {
   /*1.Una compañía de seguros tiene contratados a n vendedores. Cada uno hace tres ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo base, y un 10% extra por comisiones de sus  ventas.  El  gerente  de  su  compañía  desea  saber  cuanto  dineroobtendrá  en  la  semana  cada vendedor por concepto de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones.
   */
   // definicion variables
-   int x, n;
-   double sueldo=0, comision=0, a, b, c, sueldototal=0;
+   int contador=0, cantvendedores, cantventas=3, valorventas;
+   double sueldobase, comision, totalventas=0, sueldototal;
   
-    print("ingrese la cantida de vendedores");
-    n= int.parse(stdin.readLineSync()!);
-    x=1;
-    
-    while( x <= n){
+    print("ingrese la cantidad de vendedores");
+    cantvendedores= int.parse(stdin.readLineSync()!);
     print("ingrese el sueldo base del trabajador");
-    sueldo=double.parse(stdin.readLineSync()!);
-    print("ingrese las tres ventas del mes");
-    a=double.parse(stdin.readLineSync()!);
-    b=double.parse(stdin.readLineSync()!);
-    c=double.parse(stdin.readLineSync()!);
-    comision= (a+b+c)*0.10;
-    sueldototal= sueldo+comision;
-     x= x+1;
-  }
-  print("el sueldo mensual de los trabajadores es: $sueldo");
+    sueldobase=double.parse(stdin.readLineSync()!);
+    
+    while( contador < cantvendedores){
+    for(int i=0; i< cantventas; i++){
+    print("ingrese el valor de la venta ${i+1} del vendedor ${contador+1}");
+    valorventas=int.parse(stdin.readLineSync()!);
+    while(valorventas <0 || valorventas > 10000000){
+      print("la venta esta fuera del rango, ingrese de nuevo");
+      valorventas=int.parse(stdin.readLineSync()!);
+    }
+    totalventas=totalventas+valorventas;
+   }
+  
+  comision=totalventas*0.1;
+  sueldototal=sueldobase+comision;
+  print("el sueldo mensual de los trabajadores es: $comision");
   print("la comision del mes es: $comision");
   print("el sueldo total mas la comision es: $sueldototal");
-  
-
+  contador ++;
+  }
 }

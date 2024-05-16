@@ -7,32 +7,36 @@ void main(List<String> args) {
   */
   // definicion variables
    
-  int x, n, sexo, edad, edadmujeres=0, numeromujeres=0, promediomujeres=0, edadhombre=0, nhombres=0, promediohombres=0, promedio;
+   double promedio, promediohombres, promediomujeres;
+   int cantalumnos, contadorhombres=0, contadormujeres=0, sumatotal=0;
+   int contador=0, edad, sumahombres=0, sumamujeres=0;
+   String genero;
+  
     print("ingrese la cantidad de alumnos");
-    n= int.parse(stdin.readLineSync()!);
-    x=0;
+    cantalumnos= int.parse(stdin.readLineSync()!);
     
-    while( x <= n){
-    print("elige la opcion de acuerdo al sexo(opcion 1 hombre, opcion 2 mujer )");
-    sexo=int.parse(stdin.readLineSync()!);
-    print("ingrese su edad");
+    
+    while( contador < cantalumnos){
+    print("ingrese su genero y edad");
+    genero=stdin.readLineSync()!;
     edad=int.parse(stdin.readLineSync()!);
-    if(sexo==1){
-      edadhombre=edadhombre+edad;
-      nhombres=nhombres+1;
-      promediohombres=(edadhombre/nhombres) as int;
-    }else if (sexo==2) {
-      edadmujeres=edadmujeres+edad;
-      numeromujeres=numeromujeres+1;
-      promediomujeres=(edadmujeres/numeromujeres) as int;
+    if(genero!.toUpperCase()=="H"){
+    sumahombres=sumahombres+edad;
+    contadorhombres++;
+    }else if (genero.toUpperCase()=="M") {
+     sumamujeres= sumamujeres+edad;
+     contadormujeres++;
     }else{
-      print("escribe un numero correcto");
-      x=x-1;
+      print("genero no valido");
+      
     }
-    x=x-1;
+    contador++;
   }
-  promedio=((edadmujeres+edadmujeres)/n) as int;
-  print("el ");
+  sumatotal= sumamujeres+sumahombres;
+  promedio=sumatotal/cantalumnos;
+  promediohombres= sumahombres/contadorhombres;
+  promediomujeres=sumamujeres/contadormujeres;
+  print("el promedio de edades es: $promedio ");
   print("el promedio de hombres es: $promediohombres");
   print("el promedio de mujeres es: $promediomujeres");
 }

@@ -10,7 +10,7 @@ void main(List<String> args) {
   double peso, ninos=0, jovenes=0, adultos=0, adultosmayores=0, promedionino=0, promediojoven=0, promedioadulto=0, promedioadultomayor=0 ;
   double pesoninos=0, pesojovenes=0, pesoadultos=0, pesoadultosmayores=0;
   int cantpersonas=0;
-  double promedadnino, promedadjoven,
+  
   //proceso y salida
   for(int i=0; i<= cantpersonas; i++){
   print("ingrese la edad de la persona ");

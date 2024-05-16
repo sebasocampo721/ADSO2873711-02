@@ -7,14 +7,13 @@ void main(List<String> args) {
   */
   // definicion variables
    
-  int x, n, sexo, mujeres, hombres;
+  int contador=0, cantalumnos, sexo, mujeres, hombres;
     print("ingrese la cantidad de alumnos");
-    n= int.parse(stdin.readLineSync()!);
-    x=1;
+    cantalumnos= int.parse(stdin.readLineSync()!);
     hombres=0;
     mujeres=0;
     
-    while( x <= n){
+    while( contador < cantalumnos){
     print("elige la opcion de acuerdo al sexo(opcion 1 hombre, opcion 2 mujer )");
     sexo=int.parse(stdin.readLineSync()!);
     if(sexo==1){
@@ -23,10 +22,10 @@ void main(List<String> args) {
       mujeres=mujeres+1;
     }else{
       print("escribe un numero correcto");
-      x=x-1;
+      
     }
-    x=x-1;
+    contador++;
   }
   print("el numero de hombres es: $mujeres");
-  print("el numero de mujeres es: $mujeres");
+  print("el numero de mujeres es: $hombres");
 }

@@ -17,8 +17,7 @@ void main(List<String> args) {
     azul=0;
     
     while( n>0 ){
-    print("ingrese el numero de horas trabajadas");
-    d=int.parse(stdin.readLineSync()!);
+    
     if(d ==1 && d==2){
       amarilla=amarilla+1;
     }
