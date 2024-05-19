@@ -6,14 +6,12 @@ void main(List<String> args) {
   /*Obtener el promedio de calificaciones de un grupo de n alumnos.
   */
   // definicion variables
-   
   int x, n;
    double promedio=0, calificacio, suma=0;
   
-    print("ingrese la cantida de vendedores");
+    print("ingrese la cantidad de alumnos");
     n= int.parse(stdin.readLineSync()!);
     x=1;
-    
     while( x <= n){
     print("ingrese la calificacion");
     calificacio=double.parse(stdin.readLineSync()!);

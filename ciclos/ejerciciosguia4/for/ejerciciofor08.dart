@@ -15,7 +15,6 @@ void main(List<String> args) {
   for(int i=1; i<=n; i++ ){
     factorial=factorial*i;
   }
- 
   print("el factorial de $n es $factorial");
 }
 

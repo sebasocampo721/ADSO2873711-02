@@ -6,18 +6,14 @@ void main(List<String> args) {
   /*Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos.
   */
   // definicion variables
-   
    double promedio, promediohombres, promediomujeres;
    int cantalumnos, contadorhombres=0, contadormujeres=0, sumatotal=0;
    int contador=0, edad, sumahombres=0, sumamujeres=0;
    String genero;
-  
     print("ingrese la cantidad de alumnos");
     cantalumnos= int.parse(stdin.readLineSync()!);
-    
-    
     while( contador < cantalumnos){
-    print("ingrese su genero y edad");
+    print("ingrese el genero y edad de la persona: ${contador+1}");
     genero=stdin.readLineSync()!;
     edad=int.parse(stdin.readLineSync()!);
     if(genero!.toUpperCase()=="H"){
@@ -28,7 +24,6 @@ void main(List<String> args) {
      contadormujeres++;
     }else{
       print("genero no valido");
-      
     }
     contador++;
   }

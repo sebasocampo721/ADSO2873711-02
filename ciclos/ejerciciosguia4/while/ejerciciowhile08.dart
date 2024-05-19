@@ -6,29 +6,20 @@ void main(List<String> args) {
   /*Encontrar el mayor valor de un conjunto de n números dados.
   */
   // definicion variables
-   
-  int i, x, n, numeromenor=0;
-  i=1;
+ int cannumeros, x, n,c=0;
   x=1;
+  print("ingrese la cantidad de numeros");
+  cannumeros=int.parse(stdin.readLineSync()!);
 
-  while( i!=0){
-    print("ingrese una opcion");
-    print("1 - ingresar numero");
-    print("0 - salir");
-    i=int.parse(stdin.readLineSync()!);
-    
-    if( i==1){
-    print("ingrese el numero");
-    n=int.parse(stdin.readLineSync()!);
-    if (x==1){
-      numeromenor=n;
-      x=0;
-    }else{
-      if(n>numeromenor){
-        numeromenor=n;
-      }
-    }
+  while(x <= cannumeros){
+  print("ingresa un numero");
+  n=int.parse(stdin.readLineSync()!);
+  if(x==1){
+    c=n;
+  }else if(n>c){
+    c=n;
   }
-}
-print("el numero menor de n nmeros es: $numeromenor");
+  x= x+1;
+  }
+print("el numero mayor de n nmeros es: $c");
 }

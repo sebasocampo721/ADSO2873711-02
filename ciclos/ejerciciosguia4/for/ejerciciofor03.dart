@@ -20,7 +20,6 @@ void main(List<String> args) {
     }
   }
   print("hay $numpositivo positivos");
-  print("hay $numnegativo positivos");
+  print("hay $numnegativo negativos");
   print("hay $ceros ceros");
-  
 }
