@@ -7,12 +7,10 @@ void main(List<String> args) {
   */
   // definicion variables
    
-    int suma, x;
-    suma=0;
-    x=100;
+    
     do{
     
-  } while (cantarticulo!=0);
+  } while ();
 }
 
 

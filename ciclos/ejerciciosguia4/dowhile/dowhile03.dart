@@ -6,44 +6,27 @@ void main(List<String> args) {
   /*1.En la Cámara de Diputados se levanta una encuesta con todos los integrantes con el fin de determinar que porcentaje de los n diputados esta a favor del Tratado de Libre Comercio, que porcentaje esta en contra y que porcentaje se abstiene de opinar.El programa debe preguntar si se desea continuar ingresando datos.
   */
   // definicion variables
-   int opcion, afavor=0, encontra=0, abstiene=0, TOTAL;
-   double porcentaje1, porcentaje2, porcentaje3 ;
+   int  afavor=0, encontra=0,  totalvotos=0, cantdiputados=0;
+   double porcentajefavor, porcentajecontra;
+   String? opciontratado, opcion;
   do{
-    print("bienvenido a la encuesta");
-    print("1. esta a favor del trato");
-    print("2. esta en contra del trato");
-    print("3. se abstiene de opinar");
-    print("4. salir");
-    print("digite la opcion deseada");
-    opcion=int.parse(stdin.readLineSync()!);
-    if(opcion>=1 && opcion< 4){
-      
-    }
-    switch(opcion){
-      case 1:
+    print("señor diputado esta a favor del tratado? (f) (c)");
+    opciontratado=stdin.readLineSync();
+    if (opciontratado?.toUpperCase()=="F"){
       afavor++;
-      break;
-      case 2:
+      totalvotos++;
+    }else if (opciontratado?.toUpperCase()== "C"){
       encontra++;
-      
-      break;
-      case 3:
-      abstiene++;
-        
-      break;
-      case 4:
-      print("adios");
-      break;
-      default:
-      print("opcion incorrecta");
+      totalvotos++;
+    }else{
+      print("voto nulo");
     }
-    TOTAL=afavor+encontra+abstiene;
-    porcentaje1=((afavor/TOTAL) *100) as double;
-    porcentaje2=((encontra/TOTAL) *100) as double;
-    porcentaje3=((abstiene/TOTAL) *100) as double;
-    
-  } while (opcion!=5);
-  print("el porcentaje de personas que estan a favor es: $porcentaje1 %");
-  print("el porcentaje de personas que estan en contra es: $porcentaje2 %");
-  print("el porcentaje de personas que se abstiene de votar es: $porcentaje3 %");
+    print("hasta el momento van $totalvotos votos");
+    print("desea ingresar otro diputado? (si) (no)");
+    opcion=stdin.readLineSync();
+  } while (opcion!.toLowerCase() != "no");
+    porcentajefavor=(afavor*100);
+    porcentajecontra=(encontra*100);
+    print("el procentaje de diputados que estan a favor es: $porcentajefavor");
+    print("el procentaje de diputados que estan en contra es: $porcentajecontra");
 }

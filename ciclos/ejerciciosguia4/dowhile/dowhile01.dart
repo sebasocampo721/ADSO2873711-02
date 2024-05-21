@@ -7,15 +7,23 @@ void main(List<String> args) {
   */
   // definicion variables
    
-    String articulo;
-    int cantarticulo, cantarticulos=0;
-    double precio, totalcompra;
+    String? articulo, opcion;
+    int cantarticulo, acumarticulo=0;
+    double precio, totalcompra=0, totalarticulo=0;
     do{
-    print("ingrese la cantidad de articulos, ingrese (0) para terminar");
+    print("ingrese el articulo a comprar");
+    articulo=stdin.readLineSync();
+    print("ingrese la cantidad a comprar de $articulo");
     cantarticulo=int.parse(stdin.readLineSync()!);
-    print("ingrese el precio de los articulos");
+    print("ingrese el precio del $articulo");
     precio=double.parse(stdin.readLineSync()!);
-    totalcompra= precio*cantarticulo;
-    cantarticulo++;
-  } while (cantarticulo!=0);
+    print("el total en el articulo $articulo sera: $totalarticulo");
+    totalcompra+=totalarticulo;//acumulador
+    acumarticulo+=cantarticulo;
+    print("desea inbresar otro articulo (si)-(no)");
+    opcion=stdin.readLineSync();
+    print('*' *50);
+  } while (opcion!.toUpperCase()!="no");
+  print("el total de la compra sera : $totalcompra");
+  print("el total de articulos que lleva es: $acumarticulo");
 }

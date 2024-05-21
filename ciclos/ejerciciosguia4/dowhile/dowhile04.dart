@@ -8,11 +8,25 @@ void main(List<String> args) {
   // definicion variables
    int primaria,  secundaria,  carreratécnica,  estudiosprofesionales,  estudiosposgrado;
   do{
-   
-      
-    
-  } while (opcion!=5);
-  
+    print("señor diputado esta a favor del tratado? (f) (c)");
+    opciontratado=stdin.readLineSync();
+    if (opciontratado?.toUpperCase()=="F"){
+      afavor++;
+      totalvotos++;
+    }else if (opciontratado?.toUpperCase()== "C"){
+      encontra++;
+      totalvotos++;
+    }else{
+      print("voto nulo");
+    }
+    print("hasta el momento van $totalvotos votos");
+    print("desea ingresar otro diputado? (si) (no)");
+    opcion=stdin.readLineSync();
+  } while (opcion!.toLowerCase() != "no");
+    porcentajefavor=(afavor*100);
+    porcentajecontra=(encontra*100);
+    print("el procentaje de diputados que estan a favor es: $porcentajefavor");
+    print("el procentaje de diputados que estan en contra es: $porcentajecontra");
 }
 
 

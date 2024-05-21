@@ -7,13 +7,22 @@ void main(List<String> args) {
   */
   // definicion variables
    
-   int n,invertido=0, digito;
-    do{
-    print("ingrese el numero que desea invertir");
-    n=int.parse(stdin.readLineSync()!);
-    digito=n % 10;
-    invertido= invertido+10+digito;
-    n ~/=10;
-  } while (n!=0);
-  print("el resultado es $invertido");
+   int numinicial;
+   int modulo, nuevonumero, division;
+   print("ingrese el numero a invertir");
+   numinicial=int.parse(stdin.readLineSync()!);
+
+  print("el numero uinicial es: $numinicial");
+  stdout.write("el numero invertido es:");
+  nuevonumero=numinicial;
+  do{
+    modulo = nuevonumero % 10;
+  division=nuevonumero~/10;
+  stdout.write(modulo);
+  nuevonumero=division;
+
+  }while(division!=0);
+  
+
+
 }

@@ -7,12 +7,33 @@ void main(List<String> args) {
   */
   // definicion variables
    
-    int suma, x;
-    suma=0;
-    x=100;
+    double calificacion, prom, mayorpromedio=0, sumacalificaciones=0;
+    int numcontrol=0, cantestudiantes, contador=0;
+    print("cuantos estudiantes estan en el curso");
+    cantestudiantes=int.parse(stdin.readLineSync()!);
     do{
-    
-  } while (cantarticulo!=0);
+      print("estudiante #${contador + 1}");
+      sumacalificaciones=0;
+      for(int i=0; i<5; i++){
+        print("digite la nota ${i+1}");
+        calificacion=double.parse(stdin.readLineSync()!);
+        while (calificacion <0 || calificacion >5){
+          print("nota no valida");
+          calificacion=double.parse(stdin.readLineSync()!);
+        }
+        calificacion+=calificacion;
+      }
+      prom=sumacalificaciones/5;
+      if(prom > mayorpromedio){
+        mayorpromedio=prom;
+        numcontrol=contador+1;
+        print("hasta el momento mayor promedio es $mayorpromedio");
+      }
+      print('*'*20);
+      contador++;
+  } while (contador < cantestudiantes);
+  print("el mayor promedio es: $mayorpromedio");
+  print("el numero de control del mejor estudiante es: $numcontrol");
 }
 
 
