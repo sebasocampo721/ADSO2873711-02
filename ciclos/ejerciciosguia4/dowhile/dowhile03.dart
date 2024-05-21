@@ -6,7 +6,8 @@ void main(List<String> args) {
   /*1.En la Cámara de Diputados se levanta una encuesta con todos los integrantes con el fin de determinar que porcentaje de los n diputados esta a favor del Tratado de Libre Comercio, que porcentaje esta en contra y que porcentaje se abstiene de opinar.El programa debe preguntar si se desea continuar ingresando datos.
   */
   // definicion variables
-   int opcion, afavor=0, encontra=0, abstiene=0, TOTAL, porcentaje1, porcentaje2, porcentaje3 ;
+   int opcion, afavor=0, encontra=0, abstiene=0, TOTAL;
+   double porcentaje1, porcentaje2, porcentaje3 ;
   do{
     print("bienvenido a la encuesta");
     print("1. esta a favor del trato");
@@ -37,9 +38,9 @@ void main(List<String> args) {
       print("opcion incorrecta");
     }
     TOTAL=afavor+encontra+abstiene;
-    porcentaje1=((afavor/TOTAL) *100) as int;
-    porcentaje2=((encontra/TOTAL) *100) as int;
-    porcentaje3=((abstiene/TOTAL) *100) as int;
+    porcentaje1=((afavor/TOTAL) *100) as double;
+    porcentaje2=((encontra/TOTAL) *100) as double;
+    porcentaje3=((abstiene/TOTAL) *100) as double;
     
   } while (opcion!=5);
   print("el porcentaje de personas que estan a favor es: $porcentaje1 %");
