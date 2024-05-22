@@ -7,12 +7,15 @@ void main(List<String> args) {
   */
   // definicion variables
    
-    int suma, x;
-    suma=0;
-    x=100;
-    do{
-    
-  } while (cantarticulo!=0);
+  int a = 100;
+  int d = -2;
+  int Term = a;
+  int sum = 0;
+
+  do {
+    sum += Term;
+    Term += d;
+  } while (Term >= 0);
+
+  print("La suma  es: $sum");
 }
-
-
