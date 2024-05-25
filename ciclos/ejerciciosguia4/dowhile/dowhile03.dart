@@ -1,12 +1,10 @@
-
 import 'dart:io';
-
 void main(List<String> args) {
-  //sebastian oacampo - eje do do while 02
+  //sebastian oacampo - eje do do while 03
   /*1.En la Cámara de Diputados se levanta una encuesta con todos los integrantes con el fin de determinar que porcentaje de los n diputados esta a favor del Tratado de Libre Comercio, que porcentaje esta en contra y que porcentaje se abstiene de opinar.El programa debe preguntar si se desea continuar ingresando datos.
   */
   // definicion variables
-   int  afavor=0, encontra=0,  totalvotos=0, cantdiputados=0;
+   int  afavor=0, encontra=0,  totalvotos=0;
    double porcentajefavor, porcentajecontra;
    String? opciontratado, opcion;
   do{

@@ -22,7 +22,5 @@ void main(List<String> args) {
   nuevonumero=division;
 
   }while(division!=0);
-  
-
 
 }
