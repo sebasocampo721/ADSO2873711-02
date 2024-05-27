@@ -1,6 +1,5 @@
 
 import 'dart:io';
-
 void main(List<String> args) {
   //sebastian oacampo - eje while 05
   /*Obtener el promedio de calificaciones de un grupo de n alumnos.

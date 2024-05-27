@@ -6,7 +6,7 @@ void main(List<String> args) {
 Suponga que se tiene un conjunto de calificaciones de un grupo de 40 alumnos. Realizar un algoritmo para calcular la calificación promedio y la calificación más baja de todo el grupo.
 */
   // Lista para almacenar las calificaciones de los 40 alumnos
-  int cantAlumnos = 40;
+  int cantAlumnos = 3;
   double nota, promedio, suma = 0;
   double notaMenor = 6;
   double notaMayor = 0;

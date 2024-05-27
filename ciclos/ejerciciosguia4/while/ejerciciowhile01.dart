@@ -1,6 +1,5 @@
 
 import 'dart:io';
-
 void main(List<String> args) {
   //sebastian oacampo - eje while 01
   /*1.Una compañía de seguros tiene contratados a n vendedores. Cada uno hace tres ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo base, y un 10% extra por comisiones de sus  ventas.  El  gerente  de  su  compañía  desea  saber  cuanto  dineroobtendrá  en  la  semana  cada vendedor por concepto de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones.
@@ -24,7 +23,6 @@ void main(List<String> args) {
     }
     totalventas=totalventas+valorventas;
    }
-  
   comision=totalventas*0.1;
   sueldototal=sueldobase+comision;
   print("el sueldo mensual de los trabajadores es: $comision");

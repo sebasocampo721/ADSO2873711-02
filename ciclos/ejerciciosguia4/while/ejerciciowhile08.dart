@@ -1,6 +1,4 @@
-
 import 'dart:io';
-
 void main(List<String> args) {
   //sebastian oacampo - eje while 08
   /*Encontrar el mayor valor de un conjunto de n números dados.
@@ -10,7 +8,6 @@ void main(List<String> args) {
   x=1;
   print("ingrese la cantidad de numeros");
   cannumeros=int.parse(stdin.readLineSync()!);
-
   while(x <= cannumeros){
   print("ingresa un numero");
   n=int.parse(stdin.readLineSync()!);
