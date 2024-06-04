@@ -6,24 +6,21 @@ void main(List<String> args) {
   */
 
   //se define una lisa vacia
-  List<double> a = [], b= [], c= [];
-  int cantnumeros=7, num, numalto=0, numbajo;
+  List<double> vectorA, vectorB, vectorC=[];
+  List<double> vectorBinvertido = [];
+  vectorA= [];
+  vectorB= [];
+  double multiplicacion;
   
-  //ciclo para llenar el vector
-  for (var i = 0; i< cantnumeros; i++){
-    print("ingrese el numero #${i+1}");
-    num=int.parse(stdin.readLineSync()!);
-    a.add(num as double);
-    num=int.parse(stdin.readLineSync()!);
-    b.add(num as double);
+
+  for (int i = vectorB.length-1; i>=0; i--){
+  vectorBinvertido.add(vectorB[i]);
   }
-  numbajo=a.length-1;
-  for (var i = 0; i < a.length; i++){
-    c.add(a[numalto]*b[numbajo]);
-    numalto++;
-    numbajo--;
+  for (int i=0; i<vectorA.length; i++){
+  multiplicacion= vectorA[i] * vectorBinvertido[i];
+  vectorC.add(multiplicacion);
   }
-  print("lista a: $a");
-  print("lista b $b");
-  print("lista c $c");
+  print(vectorA);
+  print(vectorB);
+  print(vectorC);
 }

@@ -6,24 +6,22 @@ void main(List<String> args) {
   */
 
   //se define una lisa vacia
-  List<double> a = [], b= [], c= [];
-  int cantnumeros=7, num, numalto=0, numbajo;
-  
-  //ciclo para llenar el vector
-  for (var i = 0; i< cantnumeros; i++){
-    print("ingrese el numero #${i+1}");
-    num=int.parse(stdin.readLineSync()!);
-    a.add(num as double);
-    num=int.parse(stdin.readLineSync()!);
-    b.add(num as double);
+  List<String> vectpalindrome=[];
+  List<String> vectpalabra=[];
+  String? palabra;
+
+  print("ingrese la palabra para comprobar palindrome");
+  palabra=stdin.readLineSync()!;
+
+  for (int i = 0; i < palabra.length; i++){
+    vectpalabra.add(palabra[i]);
+    vectpalindrome.add(palabra[palabra.length-i-1]);
   }
-  numbajo=a.length-1;
-  for (var i = 0; i < a.length; i++){
-    c.add(a[numalto]*b[numbajo]);
-    numalto++;
-    numbajo--;
+  print(vectpalabra);
+  print(vectpalindrome);
+  if(vectpalabra.toString() == vectpalindrome){
+    print("es palndrome");
+  }else{
+  print("no es palindrome");
   }
-  print("lista a: $a");
-  print("lista b $b");
-  print("lista c $c");
 }

@@ -6,7 +6,7 @@ void main(){
   */
   List<double> x = [];
   int cantnumeros = 12;
-  double num, numero, posicion = 13;
+  double num, numero, posicion = -1;
   //ciclo para llenar el vector
   for (var i = 0; i< cantnumeros; i++){
     print("ingrese el numero #${i+1}");
@@ -15,14 +15,15 @@ void main(){
   }
   print("ingrese el numero que desea recorrer");
   numero=double.parse(stdin.readLineSync()!);
-  for (int i=0; i<12; i++){
+  for (int i = 0; i < x.length; i++){
     if(numero==x[i]){
       posicion = i as double;
+      break;//el break rompe el ciclo
   }
-  if(posicion == 13){
-    print("NO");
+  if(posicion !=-1){
+    print("el numero se encuentra en la posicion $posicion");
   }else{
-    print("la posicion es $posicion");
+    print("el numero no se encontro");
   }
 
 }
