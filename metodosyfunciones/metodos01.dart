@@ -7,9 +7,9 @@ void main(List<String> args) {
   saludar("luisa", "f");
   List<String>frutas=["mango", "pera", "uva"];
   List<String>nombres=["juan", "ana", "eva"];
-  mostraLista(frutas);
-  print("*"*50);
-  mostrarLista(nombres, "nombre");
+  //mostraLista(frutas);
+  //print("*"*50);
+  //mostrarLista(nombres, "nombre");
   double multi= multiplicacion(3, 5);
   print("la multiplicacion es $multi");
 
@@ -20,7 +20,7 @@ return multiplicacion;
 }
 void lista(List<String>lista, String nombre){
   for(var i=0; i<lista.length; i++){
-  print("nombre#${i+1}"lista[i]);
+  print("nombre#${i+1}"${lista[i]});
   }
 }
 void saludar(String nombre, String genero){

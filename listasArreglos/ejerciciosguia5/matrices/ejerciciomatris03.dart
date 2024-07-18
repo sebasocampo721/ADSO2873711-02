@@ -40,7 +40,7 @@ void main(List<String> args) {
     }
   }
   print("el articulo de mayor produccion es el articulo #${posicionmayorproduccion + 1}");
-  stdout.write("con una produccion de $mayorproduccion")
+  stdout.write("con una produccion de $mayorproduccion");
 }
 
   
