@@ -18,8 +18,8 @@ class Persona {
   void comer(){
     print("la persona ${this.nombre} come");
   }
-  void dormir(){
-    print("la persona ${this.nombre} duerme");
+  void edadpersona(){
+    print("la persona ${this.nombre} años");
   }
   void mostrarInformacion(){
     print("la persona ${this.nombre}, es de genero ${this.genero}, tine ${this.edad} años y pesa ${this.edad} kg ");
@@ -33,7 +33,7 @@ class Persona {
   persona1 = Persona("sebas", "M", 20, 56);
   persona1.hablar();
   persona1.comer();
-  persona1.dormir();
+  persona1.edadpersona();
   persona1.mostrarInformacion();
 
   /****************************/
@@ -41,7 +41,7 @@ class Persona {
   Persona persona2 = Persona("luisa", "F", 19, 55);
   persona2.hablar();
   persona2.comer();
-  persona2.dormir();
+  persona2.edadpersona();
   persona2.mostrarInformacion();
 
   
@@ -62,7 +62,7 @@ class Persona {
   Persona persona3 = Persona(nombrepersona, generopersona, edadpersona, pesopersona);
   persona2.hablar();
   persona2.comer();
-  persona2.dormir();
+  persona2.edadpersona();
   persona3.mostrarInformacion();
 
   print("*"*30);
@@ -73,7 +73,7 @@ class Persona {
   Persona persona4 = Persona(nombrepersona, generopersona, edadpersona, pesopersona);
   persona2.hablar();
   persona2.comer();
-  persona2.dormir();
+  persona2.edadpersona();
   persona3.mostrarInformacion();
  }
  
