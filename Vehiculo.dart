@@ -17,7 +17,7 @@ class Vehiculo {
       this.velocidad= this.velocidad+velAvanz;
       print("el vehiculo avanza a ${this.velocidad}");
     }else{
-      print("no puede supera el limite de 200 km/h");
+      print("no puede superar el limite de 200 km/h");
     }
 
     this.velocidad=this.velocidad+velAvanz;
@@ -28,17 +28,12 @@ class Vehiculo {
     velocidad=0;
     print("el vehiculo se detiene");
   }
+  void reducir(int velDisminuye){
+    int newVelocidad = this.velocidad - velDisminuye;
+    if (newVelocidad < 0){
+      print("la velocidad no puede ser menor acero");
+    }else{
+      print("el vehiculo disminuyo ${newVelocidad}");
+    }
 }
-void main(List<String>args){
-  Vehiculo mivehiculo1;
-  mivehiculo1= Vehiculo("blanco", 30, 35);
-  mivehiculo1.avanzar(60);
-  mivehiculo1.avanzar(70);
-  mivehiculo1.detenerse();
-  //******************** */
-  Vehiculo mivehiculo2= Vehiculo("negro", 10, 4.5);
-  mivehiculo2.avanzar(50);
-  mivehiculo2.detenerse();
-  //******************** */
-  mivehiculo1.avanzar(40);
 }
