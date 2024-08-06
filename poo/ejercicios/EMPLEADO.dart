@@ -8,12 +8,11 @@ class Empleado {
   Empleado(this.nombre, this.edad, this.salario, this.puesto, this.tipoContrato);
 
   void aumentarSalario(double porcentaje) {
-    this.salario += salario * (this.salario * porcentaje) / 100;
-    print("Salario aumento, Su Nuevo salario Es: $salario");
+    this.salario += salario * porcentaje / 100;
+    print("Salario aumentado, su nuevo salario es: $salario");
   }
 
   void cumplirAnios() {
-
     edad++;
     print("$nombre cumple años, la edad es: $edad");
   }
@@ -24,33 +23,32 @@ class Empleado {
   }
 
   void mostrarInformacion() {
-    print("Nombre: $nombre, Edad: $edad, Salario: $salario, Puesto: $puesto, Tipo de Contrato: $tipoContrato");
     print(
       """
-        nombre: $nombre.
-        Edad: $edad.
-        salario: $salario.
-        puesto: $puesto
-        tipo de contrato: $tipoContrato
-      """
-    )
+      Nombre: $nombre.
+      Edad: $edad.
+      Salario: $salario.
+      Puesto: $puesto.
+      Tipo de contrato: $tipoContrato.
+        """);
   }
 
-  double calcularBonificacion() {
+  double Bonificacion() {
     double bonificacion;
-    switch (this.tipoContrato) {
+    switch (this.tipoContrato.toLowerCase) {
       case "Contratista":
         bonificacion = salario * 0.1;
-        break 
+        break;
       case "Temporal":
         bonificacion = salario * 0.05;
-      break 
+        break;
       case "Indefinido":
         bonificacion = salario * 0.15;
-        break 
+        break;
       default:
-      bonificacion=0;
-       
+        bonificacion = 0; 
     }
+    
+    return this.salario +=bonificacion;
   }
 }
