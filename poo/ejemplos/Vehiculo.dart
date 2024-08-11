@@ -1,106 +1,68 @@
+import 'dart:ffi';
+
 class Vehiculo {
   String color;
   int velocidad;
   double tamanio;
-  // Vehiculo (String col, int vel, double tam){
-  //   this.color= col;
-  //   this.velocidad=vel;
-  //   this.tamanio=tam;
-  // }
 
-// constructor clase vehculo
-  Vehiculo (this.color, this.velocidad, this.tamanio){}
-  //metodo avanzar
-  void avanzar(int velAvanz){
-    int newVelocidad = this.velocidad + velAvanz;
-    if (newVelocidad <= 200){
-      this.velocidad= this.velocidad+velAvanz;
-      print("el vehiculo avanza a ${this.velocidad}");
-    }else{
-      print("no puede superar el limite de 200 km/h");
-    }
+  //  Vehiculo ( String col, int vel, double tam)
+  // {
+  //   this.color = col;
+  //   this. velocidad = vel;
+  //   this.tamanio = tam;
+  // } 
+  Vehiculo (this.color, this.velocidad, this.tamanio) {}
 
-    this.velocidad=this.velocidad+velAvanz;
-    print("el vehiculo avanza a ${this.velocidad}");
+  //Metodos SET Y GET 
+  //Setea o asigna un nuevo valor para el atributo color 
+  void setColor(String newColor) {
+    this.color = newColor;
   }
-
-  // metodos SET  y GET
-  //setea o asigna un nuevo valor para el atributo color 
-   void setcolor(String newcolor){
-    this.color=newcolor;
-   }
-   //permite obtener el valor del atributo color 
-   String getcolor(){
+  //Permite obtener el valor del atributo color
+  String getColor() {
     return this.color;
-   }
-   int getvelocidad(){
+  }
+
+  void setVelocidad(int newVelocidad) {
+    this.velocidad = newVelocidad;
+  }
+
+  int getVelocidad() {
     return this.velocidad;
-   }
-   int setvelocidad(){
-    return this.velocidad;
-   }
-   double settamanio(){
+  }
+
+  void setTamanio(double newTamanio) {
+    this.tamanio = newTamanio;
+  }
+
+  double getTamanio() {
     return this.tamanio;
-   }
-   double gettamanio(){
-    return this.tamanio;
-   }
-
-
-
-  //metodo detenerse
-  void detenerse(){
-    velocidad=0;
-    print("el vehiculo se detiene");
   }
-  class Vehiculo {
-  String color;
-  int velocidad;
-  double tamanio;
-  // Vehiculo (String col, int vel, double tam){
-  //   this.color= col;
-  //   this.velocidad=vel;
-  //   this.tamanio=tam;
-  // }
-
-// constructor clase vehculo
-  Vehiculo (this.color, this.velocidad, this.tamanio){}
-
-  //metodo avanzar
-  void avanzar(int velAvanz){
-    int newVelocidad = this.velocidad + velAvanz;
-    if (newVelocidad <= 200){
-      this.velocidad= this.velocidad+velAvanz;
-      print("el vehiculo avanza a ${this.velocidad}");
-    }else{
-      print("no puede superar el limite de 200 km/h");
+  
+  //Metodo avanzar
+  void avanzar(int velAvanza) {
+    int newVelocidad = this.velocidad + velAvanza;
+    if (newVelocidad <= 200) {
+      this.velocidad = this.velocidad + velAvanza;
+      print("El vehiculo avanza a ${this.velocidad}");
+    } else {
+      print("No pudo superar el limte de 200 Km/h");
     }
 
-    this.velocidad=this.velocidad+velAvanz;
-    print("el vehiculo avanza a ${this.velocidad}");
   }
-  //metodo detenerse
-  void detenerse(){
-    velocidad=0;
-    print("el vehiculo se detiene");
+  //Metodo detenerse 
+  void detenerse() {
+    velocidad = 0;
+    print("El vehiculo se detuvo");
   }
-  void reducir(int velDisminuye){
-    int newVelocidad = this.velocidad - velDisminuye;
-    if (newVelocidad < 0){
-      print("la velocidad no puede ser menor acero");
-    }else{
-      print("el vehiculo disminuyo ${newVelocidad}");
+  //Metodo Disminuir Velocidad
+  void DisminuirVelocidad(int velDisminuye) {
+     int newVelocidad = this.velocidad - velDisminuye;
+    if (newVelocidad < 0) {
+      newVelocidad = 0;
     }
-}
-}
-
-  void reducir(int velDisminuye){
-    int newVelocidad = this.velocidad - velDisminuye;
-    if (newVelocidad < 0){
-      print("la velocidad no puede ser menor acero");
-    }else{
-      print("el vehiculo disminuyo ${newVelocidad}");
-    }
-}
-
+    this.velocidad = newVelocidad; 
+    print("Vehiculo disminuyó a ${this.velocidad}");
+  }
+  //Metodo Parquear
 }
