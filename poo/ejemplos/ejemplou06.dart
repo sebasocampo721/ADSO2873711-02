@@ -1,5 +1,5 @@
 
-import 'Vehiculo.dart';
+/*import 'Vehiculo.dart';
 
 void main(List<String> args) {
   Vehiculo myCar = Vehiculo("Rojo", 200, 2.5);
@@ -8,3 +8,4 @@ void main(List<String> args) {
   myCar.setColor("Amarillo");
   print("El auto cambio a color ${myCar.getColor()}");
 }
+*/

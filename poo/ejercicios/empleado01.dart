@@ -1,4 +1,4 @@
-import 'dart:io';
+/*import 'dart:io';
 import 'EMPLEADO.dart';
 
 void main() {
@@ -53,6 +53,6 @@ for(int  i = 0; i < cantidadentradas; i++){
     print("el nuevo salario $newsalario");
     }
 }
-  
+  */
 
 
