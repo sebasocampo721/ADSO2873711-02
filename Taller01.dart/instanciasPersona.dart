@@ -2,6 +2,9 @@ import 'dart:io';
 import 'Persona.dart';
 import 'Programador.dart';
 import 'Futbolista.dart';
+
+
+
 void main(List<String> args) {
   print("bienvenido");
   print("ingrese el nombre");
@@ -10,8 +13,8 @@ void main(List<String> args) {
   int edad= int.parse(stdin.readLineSync()!);
   Persona persona1 = Persona(nombre, edad);
 
-  print("nombre: ${persona1.getnombre()}");
-  print("nombre: ${persona1.getedad()}");
+
+
 
   int cantObjetos= 2;
   List<Futbolista> listFutbolista = [];
@@ -31,10 +34,7 @@ void main(List<String> args) {
     Futbolista jugador = Futbolista(equipo, posicion, goles, nombre, edad);
 
     listFutbolista.add(jugador);
-    
-    print("informacion jugador");
-
-
+  
   }
 
   for ( var i = 0; i < cantObjetos; i++ ){
@@ -55,17 +55,22 @@ void main(List<String> args) {
     print(listProgramador);
   }
 
-  int opcion=0;
-  print("informacion futbolistas");
-  print("ingrese una opcion");
-   switch (opcion){
-    case 1: 
-    break;
-    case 2: 
-    break;
-    case 3: 
-    break;
+  //usar los métodos de los objetos
+  //Persona
+  print("Ingrese el nuevo nombre de la persona: ${persona1.getnombre()}");
+  String nombreNuevo = stdin.readLineSync()!;
+  persona1.setnombre(nombreNuevo);
+  print("Nuevo nombre de la persona: ${persona1.getnombre()}");
 
-   }
+  print("Ingrese la nueva edad de la persona: ${persona1.getedad()}");
+  int edadNueva = int.parse(stdin.readLineSync()!);
+  persona1.setedad(edadNueva);
+  print("Nuevo nombre de la persona: ${persona1.getnombre()}");
+
+  //programador
+  print("Ingrese la nueva edad de la persona: ${persona1.getedad()}");
+  int edadNueva = int.parse(stdin.readLineSync()!);
+  persona1.setedad(edadNueva);
+  print("Nuevo nombre de la persona: ${persona1.getnombre()}");
 
 }
