@@ -37,14 +37,16 @@ class Futbolista extends Persona{
   }
 
   }
-void mostrarInfo () {
-  this.mostrarInfo();
-  print("""
-        : $_equipo
-        : $_posicion
-        : $cantidadGoles
-        """);
- }
+ @override
+  void mostrarInfo() {
+    super.mostrarInfo();
+    print("""
+      Equipo: $_equipo
+      Posición: $_posicion
+      Cantidad de goles: $cantidadGoles
+      Titular: ${esTitular() ? 'Sí' : 'No'}
+    """);
+  }
   
 
 
