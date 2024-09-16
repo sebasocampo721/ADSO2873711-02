@@ -1,4 +1,4 @@
-import 'Persona.dart';
+import '../Taller001.dart/Persona.dart';
 
 class Programador extends Persona {
   String _empresa;
@@ -28,8 +28,8 @@ class Programador extends Persona {
     super.mostrarInfo();
     print("""
       Empresa: $_empresa
-      Salario: \$$_salario
-      Salario Neto: \$${obtenerSalarioNeto()}
+      Salario: $_salario
+      Salario Neto: ${obtenerSalarioNeto()}
     """);
   }
 }

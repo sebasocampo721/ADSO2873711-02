@@ -1,21 +1,22 @@
 import 'dart:io';
-import 'persona.dart';
-import 'futbolista.dart';
-import 'programador.dart';
+import '../Taller001.dart/persona.dart';
+import '../Taller001.dart/futbolista.dart';
+import '../Taller001.dart/programador.dart';
 
-void main(List<String> args) {
+void main() {
   print("Bienvenido");
-  print("Ingrese el nombre de la persona:");
+  print("Ingrese el nombre:");
   String nombre = stdin.readLineSync()!;
-  print("Ingrese la edad de la persona:");
+  print("Ingrese la edad:");
   int edad = int.parse(stdin.readLineSync()!);
   Persona persona1 = Persona(nombre, edad);
-  
-  // Crear instancias de Futbolista
-  int cantFutbolistas = 2;
+
+  int cantObjetos = 2;
   List<Futbolista> listFutbolista = [];
-  
-  for (var i = 0; i < cantFutbolistas; i++) {
+  List<Programador> listProgramador = [];
+
+  // Crear instancias de Futbolista
+  for (var i = 0; i < cantObjetos; i++) {
     print("Ingrese el nombre del futbolista ${i + 1}:");
     nombre = stdin.readLineSync()!;
     print("Ingrese la edad del futbolista ${nombre}:");
@@ -32,10 +33,7 @@ void main(List<String> args) {
   }
 
   // Crear instancias de Programador
-  int cantProgramadores = 2;
-  List<Programador> listProgramador = [];
-  
-  for (var i = 0; i < cantProgramadores; i++) {
+  for (var i = 0; i < cantObjetos; i++) {
     print("Ingrese el nombre del programador ${i + 1}:");
     nombre = stdin.readLineSync()!;
     print("Ingrese la edad del programador ${nombre}:");
@@ -49,17 +47,16 @@ void main(List<String> args) {
     listProgramador.add(programador);
   }
 
-  // Usar los métodos de los objetos
-  // Persona
-  print("Ingrese el nuevo nombre de la persona (${persona1.getNombre()}):");
+  // Usar los métodos de los objetos Persona
+  print("Ingrese el nuevo nombre de la persona (${persona1.getnombre()}):");
   String nombreNuevo = stdin.readLineSync()!;
-  persona1.setNombre(nombreNuevo);
-  print("Nuevo nombre de la persona: ${persona1.getNombre()}");
+  persona1.setnombre(nombreNuevo);
+  print("Nuevo nombre de la persona: ${persona1.getnombre()}");
 
-  print("Ingrese la nueva edad de la persona (${persona1.getEdad()}):");
+  print("Ingrese la nueva edad de la persona (${persona1.getedad()}):");
   int edadNueva = int.parse(stdin.readLineSync()!);
-  persona1.setEdad(edadNueva);
-  print("Nueva edad de la persona: ${persona1.getEdad()}");
+  persona1.setedad(edadNueva);
+  print("Nueva edad de la persona: ${persona1.getedad()}");
 
   // Mostrar información de futbolistas
   for (var futbolista in listFutbolista) {

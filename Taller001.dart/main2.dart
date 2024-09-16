@@ -25,4 +25,4 @@ void main() {
   circulo.mostrarInfo();
   cuadrado.mostrarInfo();
   triangulo.mostrarInfo();
-}24
+}

@@ -1,4 +1,4 @@
-import 'Persona.dart';
+import '../Taller001.dart/Persona.dart';
 
 class Futbolista extends Persona{
  String _equipo;

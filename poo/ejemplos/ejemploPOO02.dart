@@ -24,6 +24,10 @@ class Persona {
   void mostrarInformacion(){
     print("la persona ${this.nombre}, es de genero ${this.genero}, tine ${this.edad} años y pesa ${this.edad} kg ");
   }
+
+  getedad(int edadNueva) {}
+
+  getnombre(String nombreNuevo) {}
   
 } //fin clase
  
