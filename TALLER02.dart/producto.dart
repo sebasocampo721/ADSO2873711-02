@@ -203,8 +203,8 @@ class Parlante extends Electrodomestico {
 void main (){
   List<DiscoDuro> discosDuros =[];
   List<Marcador> marcadores =[];
-  List<Portatil> Portatiles =[];
-  List<Parlante> Parlantes =[];
+  List<Portatil> portatiles =[];
+  List<Parlante> parlantes =[];
  
   while (true) {
     print("""
@@ -276,7 +276,7 @@ void main (){
         print("ingrese el tipo procesador");
         String procesador=stdin.readLineSync()!;
         Portatil portatil=Portatil(codigoProducto, nombreProducto, disponible, precio, consumoWatts, tamanoMemoria, procesador);
-        Portatiles.add(portatil);
+        portatiles.add(portatil);
       break;
 
       case 4:
@@ -295,23 +295,44 @@ void main (){
         print("ingrese el peso del parlante");
         double peso= double.parse(stdin.readLineSync()!);
         Parlante parlante = Parlante(codigoProducto, nombreProducto, disponible, precio, consumoWatts, potencia, peso);
-        Parlantes.add(parlante);
+        parlantes.add(parlante);
       break;
 
       case 5:
-
+        print("Discos duros en venta");
+        for (var i = 0; i < discosDuros.length; i++) {
+          print("${i + 1}. ${discosDuros[i].nombreProducto}");
+        }
+        print("ingrese el nuemro del disco que dessea comprar");
+        int posicionDisco=int.parse(stdin.readLineSync()!);
+        print("El precio a pagar con el descuento es de: ${discosDuros[posicionDisco - 1].realizarDescuento()}");
+        break;
 
       case 6:
-        
-       
+        print("marcadores en venta");
+        for (var i = 0; i < marcadores.length; i++) {
+          print("${i + 1}. ${marcadores[i].nombreProducto}");
+        }
+        print("ingrese nombre del marcador que desea comprar");
+        String nombre_producto=stdin.readLineSync()!;
         break;
 
       case 7:
-        
+        print("portatiles en venta");
+        for (var i = 0; i < portatiles.length; i++) {
+          print("${i + 1}. ${portatiles[i].nombreProducto}");
+        }
+        print("ingrese nombre del portatil que desea comprar");
+        String nombre_producto=stdin.readLineSync()!;
         break;
 
       case 8:
-        
+        print("parlantes en venta");
+        for (var i = 0; i < parlantes.length; i++) {
+          print("${i + 1}. ${parlantes[i].nombreProducto}");
+        }
+        print("ingrese nombre del parlante que desea comprar");
+        String nombre_producto=stdin.readLineSync()!;
         break;
 
       case 9:
