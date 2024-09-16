@@ -201,8 +201,11 @@ class Parlante extends Electrodomestico {
 //------------------------------------------------//
 
 void main (){
-  var productos = <Producto>[];
-
+  List<DiscoDuro> discosDuros =[];
+  List<Marcador> marcadores =[];
+  List<Portatil> Portatiles =[];
+  List<Parlante> Parlantes =[];
+ 
   while (true) {
     print("""
         Bienvenido
@@ -224,86 +227,99 @@ void main (){
 
     switch (opcion) {
       case 1:
-      DiscoDuro discoDuro1 = DiscoDuro(1 as String, 'Disco Duro 1TB' as int, true, 100.0, 'SSD', 1024);
-        print('Disco Duro creado.');
-        
-        break;
+        print("ingrese el tipo de disco duro");
+        String tipoDisco = stdin.readLineSync()!;
+        print("Ingrese la capacidad");
+        int cap = int.parse(stdin.readLineSync()!);
+        print("ingrese el codigo de producto");
+        int codigo_producto= int.parse(stdin.readLineSync()!);
+        print("ingrese el nombre del producto");
+        String nombre_producto=stdin.readLineSync()!;
+        print("ingrese si esta disponible 'true' si no 'false'");
+        bool disponible=bool.parse(stdin.readLineSync()!);
+        print("ingrese el precio");
+        double precio=double.parse(stdin.readLineSync()!);
+        DiscoDuro discoDuro = DiscoDuro(tipoDisco, cap, codigo_producto, nombre_producto, disponible, precio);
+        discosDuros.add(discoDuro);
+      break;
 
       case 2:
-        Marcador marcador1= Marcador(2 as String, 'Marcador Permanente', true as int, 1.5 as String, 'Negro' as bool, 'Permanente' as double);
-        print('Marcador creado.');
-        break;
+        print("ingrese el tipo marcador");
+        String tipoMarcador= stdin.readLineSync()!;
+        print("ingrese el color tinta");
+        String colorTinta=stdin.readLineSync()!;
+        print("ingrese el codigo del producto");
+        int codigoProducto=int. parse(stdin.readLineSync()!);
+        print("ingrese el nombre del producto");
+        String nombreProducto=stdin.readLineSync()!;
+        print("ingrese si esta disponible 'true' si no 'false'");
+        bool disponible=bool.parse(stdin.readLineSync()!);
+        print("ingrese el precio");
+        double precio=double.parse(stdin.readLineSync()!);
+        Marcador marcador= Marcador(tipoMarcador, colorTinta, codigoProducto, nombreProducto, disponible, precio);
+        marcadores.add(marcador);
+      break;
 
       case 3:
-        Portatil portatil1 = Portatil(true as int, 1200.0 as String, 150 as bool, true as double, '16GB' as int, 'Intel i7' as int);
-        print('Portátil creado.');
-        break;
+        print("ingrese el codigo del producto");
+        int codigoProducto=int. parse(stdin.readLineSync()!);
+        print("ingrese el nombre del producto");
+        String nombreProducto=stdin.readLineSync()!;
+        print("ingrese si esta disponible 'true' si no 'false'");
+        bool disponible=bool.parse(stdin.readLineSync()!);
+        print("ingrese el precio");
+        double precio=double.parse(stdin.readLineSync()!);
+        print("ingrese el consumo de watts");
+        int consumoWatts= int.parse(stdin.readLineSync()!);
+        print("ingrese el tamaño de la memoria");
+        int tamanoMemoria=int.parse(stdin.readLineSync()!);
+        print("ingrese el tipo procesador");
+        String procesador=stdin.readLineSync()!;
+        Portatil portatil=Portatil(codigoProducto, nombreProducto, disponible, precio, consumoWatts, tamanoMemoria, procesador);
+        Portatiles.add(portatil);
+      break;
 
       case 4:
-        Parlante parlante1= Parlante(true as int, 50.0 as String, 200 as bool, true as double, '50W' as int, 1.5 as String);
-        print('Parlante creado.');
-       
-        break;
+        print("ingrese el codigo del producto");
+        int codigoProducto=int. parse(stdin.readLineSync()!);
+        print("ingrese el nombre del producto");
+        String nombreProducto=stdin.readLineSync()!;
+        print("ingrese si esta disponible 'true' si no 'false'");
+        bool disponible=bool.parse(stdin.readLineSync()!);
+        print("ingrese el precio");
+        double precio=double.parse(stdin.readLineSync()!);
+        print("ingrese el consumo de watts");
+        int consumoWatts= int.parse(stdin.readLineSync()!);
+        print("ingrese la potencia del parlante");
+        String potencia=stdin.readLineSync()!;
+        print("ingrese el peso del parlante");
+        double peso= double.parse(stdin.readLineSync()!);
+        Parlante parlante = Parlante(codigoProducto, nombreProducto, disponible, precio, consumoWatts, potencia, peso);
+        Parlantes.add(parlante);
+      break;
 
       case 5:
-       if (DiscoDuro != null) {
-          DiscoDuro.precio = DiscoDuro.realizarDescuento();
-          DiscoDuro.mostrarInfo();
-        } else {
-          print('Disco Duro no disponible.');
-        }
-        break;
+
 
       case 6:
-        if (Marcador != null) {
-          Marcador.precio = Marcador.realizarDescuento();
-          Marcador.mostrarInformacionProducto();
-        } else {
-          print('Marcador no disponible.');
-        }
+        
        
         break;
 
       case 7:
-        if (Portatil != null) {
-          Portatil.precio = Portatil.realizarDescuento();
-          Portatil.mostrarInformacionProducto();
-        } else {
-          print('Portátil no disponible.');
-        }
+        
         break;
 
       case 8:
-        if (Parlante != null) {
-          Parlante._precio = Parlante.realizarDescuento();
-          Parlante.mostrarInformacionProducto();
-        } else {
-          print('Parlante no disponible.');
-        }
+        
         break;
 
       case 9:
-         if (Portatil != null) {
-          print('Introduce las horas de uso:');
-          String? horasInput = stdin.readLineSync();
-          int horas = int.parse(horasInput ?? '0');
-          double precioConsumo = Portatil.calcularPrecioConsumo(horas);
-          print('El precio por $horas horas de consumo es: $precioConsumo');
-        } else {
-          print('Portátil no disponible.');
-        }
+         
         break;
 
       case 10:
-        if (Parlante != null) {
-          print('Introduce las horas de uso:');
-          String? horasInput = stdin.readLineSync();
-          int horas = int.parse(horasInput ?? '0');
-          double precioConsumo = Parlante.calcularPrecioConsumo(horas);
-          print('El precio por $horas horas de consumo es: $precioConsumo');
-        } else {
-          print('Parlante no disponible.');
-        }
+        
         break;
 
       case 11:
