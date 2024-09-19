@@ -314,7 +314,9 @@ void main (){
           print("${i + 1}. ${marcadores[i].nombreProducto}");
         }
         print("ingrese nombre del marcador que desea comprar");
-        String nombre_producto=stdin.readLineSync()!;
+        int posicionMarcador=int.parse(stdin.readLineSync()!);
+        print("El precio a pagar con el descuento es de: ${marcadores[posicionMarcador - 1].realizarDescuento()}");
+
         break;
 
       case 7:
@@ -323,7 +325,9 @@ void main (){
           print("${i + 1}. ${portatiles[i].nombreProducto}");
         }
         print("ingrese nombre del portatil que desea comprar");
-        String nombre_producto=stdin.readLineSync()!;
+        int posicionPortatilesr=int.parse(stdin.readLineSync()!);
+        print("El precio a pagar con el descuento es de: ${discosDuros[posicionPortatilesr - 1].realizarDescuento()}");
+
         break;
 
       case 8:
@@ -332,7 +336,9 @@ void main (){
           print("${i + 1}. ${parlantes[i].nombreProducto}");
         }
         print("ingrese nombre del parlante que desea comprar");
-        String nombre_producto=stdin.readLineSync()!;
+        int posicionParlantes=int.parse(stdin.readLineSync()!);
+        print("El precio a pagar con el descuento es de: ${discosDuros[posicionParlantes - 1].realizarDescuento()}");
+
         break;
 
       case 9:
