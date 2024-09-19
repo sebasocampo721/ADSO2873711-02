@@ -326,7 +326,7 @@ void main (){
         }
         print("ingrese nombre del portatil que desea comprar");
         int posicionPortatilesr=int.parse(stdin.readLineSync()!);
-        print("El precio a pagar con el descuento es de: ${discosDuros[posicionPortatilesr - 1].realizarDescuento()}");
+        print("El precio a pagar con el descuento es de: ${portatiles[posicionPortatilesr - 1].realizarDescuento()}");
 
         break;
 
@@ -337,7 +337,7 @@ void main (){
         }
         print("ingrese nombre del parlante que desea comprar");
         int posicionParlantes=int.parse(stdin.readLineSync()!);
-        print("El precio a pagar con el descuento es de: ${discosDuros[posicionParlantes - 1].realizarDescuento()}");
+        print("El precio a pagar con el descuento es de: ${parlantes[posicionParlantes - 1].realizarDescuento()}");
 
         break;
 
